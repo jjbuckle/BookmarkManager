@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <h1>Create new bookmark</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+
+   <%= form_for(@client) do |f| %>
+  <div class="field">
+    <%= f.label :client_name %> <%= f.text_area :name %><br>
+    <%= f.label :URL %> <%= f.text_area :url %><br>
+    <%= f.label :username %> <%= f.text_area :username %><br>
+    <%= f.label :password %> <%= f.text_area :password %><br>
+
+  </div>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
+  </div>
+</div>

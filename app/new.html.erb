@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1m.svg">
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+
+   <%= form_for(@client) do |f| %>
+  <div class="field">
+    <%= f.label :client %><br>
+    <%= f.text_area :name %><br>
+    <%= f.text_area :url %><br>
+    <%= f.text_area :username %><br>
+    <%= f.text_area :password %><br>
+
+  </div>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
+  </div>
+</div>

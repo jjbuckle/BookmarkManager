@@ -1,0 +1,31 @@
+<div class="header">
+  <div class="container">
+    <br>
+    <h1>Bookmarks</h1>
+  </div>
+</div>
+<div class = "bookmarks">
+  <div class = "container">
+    <ul>
+    <% @clients.each do |client| %>
+      <li>
+      <div class="bookmark">
+        <span class = "client"> <%= link_to client.name, client.loginurl %> </span> <span class="username"> <%= client.username %> </span>
+        <br>
+        <!-- <p> <%= client.username %> </p>
+        <p> <%= client.name %> </p>
+        <p> <%= client.password %> </p> -->
+        <!-- <%= button_to "Delete", client, method: :delete, data: {confirm: "Are you sure you want to delete this worker?"}%> -->
+          <p class = "button"> <%= link_to "Delete", client_path(client), :method => :delete, :data => {:confirm => 'Confirm Deletion'} %>
+          <%= link_to "Edit", edit_client_path(client) %> </p><br>
+      </div>
+        <!-- <p class = "button"> <%= link_to "Delete", client_path(client), :method => :delete, :data => {:confirm => 'Confirm Deletion'} %>
+        <%= link_to "Edit", edit_client_path(client) %> </p><br> -->
+      </li>
+  <% end %>
+</ul>
+  <div class="newsubmit">
+<%= link_to 'New Client', "clients/new" %>
+</div>
+  </div>
+</div>
